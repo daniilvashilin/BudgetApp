@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct HeaderView: View {
-    //    @State var choice = choiceOptions(selectedVariation: .daily)
+    var showPicker: Bool
     var body: some View {
         HStack {
             Text("\(Date().formattedAsMonthDay())")
                 .font(.custom("Inter18pt-ExtraLight", size: 30))
                 .foregroundStyle(.primary)
-            PickerView()
+            if showPicker {
+                PickerView()
+            }
             Spacer()
             Image("selfiTests")
                 .resizable()
@@ -26,7 +28,7 @@ struct HeaderView: View {
     }
 }
 #Preview {
-    HeaderView()
+    HeaderView(showPicker: true)
 }
 
 

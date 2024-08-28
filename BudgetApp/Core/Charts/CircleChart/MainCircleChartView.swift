@@ -9,34 +9,42 @@ import SwiftUI
 import Charts
 
 struct MainCircleChartView: View {
+    var chartWidth: Double
+    var chartHeight: Double
+    var sumSize: Double
+    var totalSize: Double
+    var isSmallShowing: Bool
+    var insertRadius: MarkDimension
     var body: some View {
         ZStack(alignment: .center) {
             Chart {
                 ForEach(MockDataTesting.theResultValue)  {data in
                     SectorMark(angle: .value("stream", data.categoryValue),
-                               innerRadius: 135,
+                               innerRadius: insertRadius,
                                angularInset: 2)
                     .foregroundStyle(data.color)
                 }
             }
             .chartLegend(.hidden)
-            .frame(width: 300, height: 300, alignment: .center)
+            .frame(width: chartWidth, height: chartHeight, alignment: .center)
             VStack(alignment: .center) {
                 Text("1975.80 ₪")
-                    .font(.custom("Inter18pt-ExtraLight", size: 30))
-                Text("Total")
-                    .font(.custom("Inter18pt-ExtraLight", size: 16))
-                    .foregroundStyle(.whiteAndGrayFont)
+                    .font(.custom("Inter18pt-ExtraLight", size: sumSize))
+//                Text("Total")
+//                    .font(.custom("Inter18pt-ExtraLight", size: totalSize))
+//                    .foregroundStyle(.whiteAndGrayFont)
             }
         }
         .padding()
-        Text("Spend: 11.558 ₪")
-            .font(.custom("Inter18pt-ExtraLight", size: 16))
+        if isSmallShowing {
+            Text("Spend: 11.558 ₪")
+                .font(.custom("Inter18pt-ExtraLight", size: 16))
+        }
     }
 }
 
 #Preview {
-    MainCircleChartView()
+    MainCircleChartView(chartWidth: 300, chartHeight: 300, sumSize: 30, totalSize: 16, isSmallShowing: true, insertRadius: 135)
 }
 
 

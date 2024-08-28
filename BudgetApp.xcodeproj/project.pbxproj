@@ -20,6 +20,13 @@
 		490A786A2C7BA92D00768A15 /* CustomButtonBlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A78692C7BA92D00768A15 /* CustomButtonBlueView.swift */; };
 		490A786D2C7CE6B400768A15 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A786C2C7CE6B400768A15 /* TransactionsView.swift */; };
 		490A786F2C7CE6CE00768A15 /* ScrollTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A786E2C7CE6CE00768A15 /* ScrollTabItemView.swift */; };
+		490A78722C7E583300768A15 /* SearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A78712C7E583300768A15 /* SearchButtonView.swift */; };
+		490A78752C7E6DE600768A15 /* StatsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A78742C7E6DE600768A15 /* StatsPageView.swift */; };
+		490A78782C7E6E7100768A15 /* DatePickerChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A78772C7E6E7100768A15 /* DatePickerChartView.swift */; };
+		49D639B52C7E8B5A006DC89F /* GoalTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639B42C7E8B5A006DC89F /* GoalTabItemView.swift */; };
+		49D639B72C7F6A79006DC89F /* ScrollGoalVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639B62C7F6A79006DC89F /* ScrollGoalVIew.swift */; };
+		49D639B92C7F6C8D006DC89F /* CategroyListVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639B82C7F6C8D006DC89F /* CategroyListVIew.swift */; };
+		49D639BB2C7F6CA6006DC89F /* CategoryListtItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639BA2C7F6CA6006DC89F /* CategoryListtItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,13 @@
 		490A78692C7BA92D00768A15 /* CustomButtonBlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonBlueView.swift; sourceTree = "<group>"; };
 		490A786C2C7CE6B400768A15 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		490A786E2C7CE6CE00768A15 /* ScrollTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTabItemView.swift; sourceTree = "<group>"; };
+		490A78712C7E583300768A15 /* SearchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonView.swift; sourceTree = "<group>"; };
+		490A78742C7E6DE600768A15 /* StatsPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPageView.swift; sourceTree = "<group>"; };
+		490A78772C7E6E7100768A15 /* DatePickerChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerChartView.swift; sourceTree = "<group>"; };
+		49D639B42C7E8B5A006DC89F /* GoalTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTabItemView.swift; sourceTree = "<group>"; };
+		49D639B62C7F6A79006DC89F /* ScrollGoalVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollGoalVIew.swift; sourceTree = "<group>"; };
+		49D639B82C7F6C8D006DC89F /* CategroyListVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategroyListVIew.swift; sourceTree = "<group>"; };
+		49D639BA2C7F6CA6006DC89F /* CategoryListtItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListtItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +106,7 @@
 		490A77D42C7995B500768A15 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				490A78702C7E581200768A15 /* SearchButton */,
 				490A786B2C7CE69800768A15 /* ScrollTransactions */,
 				490A78682C7BA91D00768A15 /* ButtonsStyle */,
 				490A77DC2C7996CD00768A15 /* UserSettings */,
@@ -146,7 +161,8 @@
 		490A77DA2C7996BF00768A15 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				490A78662C7BA1D600768A15 /* MainCircleChartView.swift */,
+				490A78762C7E6E5300768A15 /* CircleChart */,
+				490A78732C7E6DD000768A15 /* Statistics */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -212,6 +228,43 @@
 				490A786E2C7CE6CE00768A15 /* ScrollTabItemView.swift */,
 			);
 			path = ScrollTransactions;
+			sourceTree = "<group>";
+		};
+		490A78702C7E581200768A15 /* SearchButton */ = {
+			isa = PBXGroup;
+			children = (
+				490A78712C7E583300768A15 /* SearchButtonView.swift */,
+			);
+			path = SearchButton;
+			sourceTree = "<group>";
+		};
+		490A78732C7E6DD000768A15 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				49D639B32C7E8B4F006DC89F /* Goals */,
+				490A78742C7E6DE600768A15 /* StatsPageView.swift */,
+				490A78772C7E6E7100768A15 /* DatePickerChartView.swift */,
+				49D639B82C7F6C8D006DC89F /* CategroyListVIew.swift */,
+				49D639BA2C7F6CA6006DC89F /* CategoryListtItemView.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		490A78762C7E6E5300768A15 /* CircleChart */ = {
+			isa = PBXGroup;
+			children = (
+				490A78662C7BA1D600768A15 /* MainCircleChartView.swift */,
+			);
+			path = CircleChart;
+			sourceTree = "<group>";
+		};
+		49D639B32C7E8B4F006DC89F /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				49D639B42C7E8B5A006DC89F /* GoalTabItemView.swift */,
+				49D639B62C7F6A79006DC89F /* ScrollGoalVIew.swift */,
+			);
+			path = Goals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,12 +340,19 @@
 			files = (
 				490A77C92C79940800768A15 /* ContentView.swift in Sources */,
 				490A77C72C79940800768A15 /* BudgetAppApp.swift in Sources */,
+				490A78722C7E583300768A15 /* SearchButtonView.swift in Sources */,
+				490A78782C7E6E7100768A15 /* DatePickerChartView.swift in Sources */,
+				49D639B52C7E8B5A006DC89F /* GoalTabItemView.swift in Sources */,
 				490A78672C7BA1D600768A15 /* MainCircleChartView.swift in Sources */,
+				49D639B92C7F6C8D006DC89F /* CategroyListVIew.swift in Sources */,
+				49D639BB2C7F6CA6006DC89F /* CategoryListtItemView.swift in Sources */,
 				490A77DF2C79978300768A15 /* GlobalModel.swift in Sources */,
 				490A77E42C7B7ABB00768A15 /* PickerView.swift in Sources */,
 				490A786D2C7CE6B400768A15 /* TransactionsView.swift in Sources */,
+				49D639B72C7F6A79006DC89F /* ScrollGoalVIew.swift in Sources */,
 				490A77E72C7B904A00768A15 /* DateFormaterExtan.swift in Sources */,
 				490A77E12C79999D00768A15 /* HeaderView.swift in Sources */,
+				490A78752C7E6DE600768A15 /* StatsPageView.swift in Sources */,
 				490A786F2C7CE6CE00768A15 /* ScrollTabItemView.swift in Sources */,
 				490A786A2C7BA92D00768A15 /* CustomButtonBlueView.swift in Sources */,
 			);
