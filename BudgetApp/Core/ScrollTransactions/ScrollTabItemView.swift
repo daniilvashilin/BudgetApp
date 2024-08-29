@@ -12,12 +12,13 @@ struct ScrollTabItemView: View {
     var body: some View {
         GeometryReader { geom in
             HStack {
-                Image(colorScheme == .light ?"bedIcon" : "bedIconLight")
+                Image(.carIcon)
                     .resizable()
                     .frame(width: 25, height: 25)
                     .padding(10)
                     .background(.tabIconBackground)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .foregroundStyle(.whiteAndGrayFont)
                 VStack(alignment: .leading) {
                     Text("Category Name")
                         .font(.custom("Inter18pt-ExtraLight", size: 18))

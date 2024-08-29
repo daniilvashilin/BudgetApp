@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct CustomButtonBlueView: View {
+    @State var isPressed = false
     var body: some View {
         Button(action: {
-            // Action
+            withAnimation(.easeInOut(duration: 3)) { // Custom animation
+                isPressed.toggle()
+                            }
         }, label: {
             Text("+ Add transaction")
                 .frame(width: 200, height: 40)
@@ -19,6 +22,11 @@ struct CustomButtonBlueView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .font(.custom("Inter18pt-ExtraLight", size: 18))
         })
+        .sheet(isPresented: $isPressed) {
+            AddTransactionStyleView( isPresented: $isPressed)
+                        .presentationDetents([.large]) // Forces the sheet to appear in full height
+                        .presentationDragIndicator(.visible)
+                }
     }
 }
 
