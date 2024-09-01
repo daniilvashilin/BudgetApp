@@ -30,6 +30,10 @@
 		49D639BE2C80E1D0006DC89F /* AddTransactionStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639BD2C80E1D0006DC89F /* AddTransactionStyleView.swift */; };
 		49D639C02C80E854006DC89F /* AddTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639BF2C80E854006DC89F /* AddTransactionModel.swift */; };
 		49D639C22C80FDA4006DC89F /* CustimColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639C12C80FDA4006DC89F /* CustimColorPickerView.swift */; };
+		49D639C52C84CC98006DC89F /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 49D639C42C84CC98006DC89F /* SVGKit */; };
+		49D639C72C84CC98006DC89F /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49D639C62C84CC98006DC89F /* SVGKitSwift */; };
+		49D639CB2C84DE5A006DC89F /* TransactionAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639CA2C84DE5A006DC89F /* TransactionAddingView.swift */; };
+		49D639CD2C84E1E0006DC89F /* IconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639CC2C84E1E0006DC89F /* IconPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,8 @@
 		49D639BD2C80E1D0006DC89F /* AddTransactionStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionStyleView.swift; sourceTree = "<group>"; };
 		49D639BF2C80E854006DC89F /* AddTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionModel.swift; sourceTree = "<group>"; };
 		49D639C12C80FDA4006DC89F /* CustimColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustimColorPickerView.swift; sourceTree = "<group>"; };
+		49D639CA2C84DE5A006DC89F /* TransactionAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAddingView.swift; sourceTree = "<group>"; };
+		49D639CC2C84E1E0006DC89F /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D639C72C84CC98006DC89F /* SVGKitSwift in Frameworks */,
+				49D639C52C84CC98006DC89F /* SVGKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,11 +285,29 @@
 		49D639BC2C80E1B7006DC89F /* AddTransaction */ = {
 			isa = PBXGroup;
 			children = (
-				49D639BD2C80E1D0006DC89F /* AddTransactionStyleView.swift */,
-				49D639BF2C80E854006DC89F /* AddTransactionModel.swift */,
-				49D639C12C80FDA4006DC89F /* CustimColorPickerView.swift */,
+				49D639C82C84DE20006DC89F /* OldAndNotWorking */,
+				49D639C92C84DE35006DC89F /* TransactionVIewsMain */,
 			);
 			path = AddTransaction;
+			sourceTree = "<group>";
+		};
+		49D639C82C84DE20006DC89F /* OldAndNotWorking */ = {
+			isa = PBXGroup;
+			children = (
+				49D639BD2C80E1D0006DC89F /* AddTransactionStyleView.swift */,
+			);
+			path = OldAndNotWorking;
+			sourceTree = "<group>";
+		};
+		49D639C92C84DE35006DC89F /* TransactionVIewsMain */ = {
+			isa = PBXGroup;
+			children = (
+				49D639BF2C80E854006DC89F /* AddTransactionModel.swift */,
+				49D639C12C80FDA4006DC89F /* CustimColorPickerView.swift */,
+				49D639CC2C84E1E0006DC89F /* IconPickerView.swift */,
+				49D639CA2C84DE5A006DC89F /* TransactionAddingView.swift */,
+			);
+			path = TransactionVIewsMain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +326,10 @@
 			dependencies = (
 			);
 			name = BudgetApp;
+			packageProductDependencies = (
+				49D639C42C84CC98006DC89F /* SVGKit */,
+				49D639C62C84CC98006DC89F /* SVGKitSwift */,
+			);
 			productName = BudgetApp;
 			productReference = 490A77C32C79940800768A15 /* BudgetApp.app */;
 			productType = "com.apple.product-type.application";
@@ -328,6 +358,9 @@
 				Base,
 			);
 			mainGroup = 490A77BA2C79940800768A15;
+			packageReferences = (
+				49D639C32C84CC98006DC89F /* XCRemoteSwiftPackageReference "SVGKit" */,
+			);
 			productRefGroup = 490A77C42C79940800768A15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,11 +395,13 @@
 				490A78782C7E6E7100768A15 /* DatePickerChartView.swift in Sources */,
 				49D639B52C7E8B5A006DC89F /* GoalTabItemView.swift in Sources */,
 				490A78672C7BA1D600768A15 /* MainCircleChartView.swift in Sources */,
+				49D639CB2C84DE5A006DC89F /* TransactionAddingView.swift in Sources */,
 				49D639B92C7F6C8D006DC89F /* CategroyListVIew.swift in Sources */,
 				49D639BB2C7F6CA6006DC89F /* CategoryListtItemView.swift in Sources */,
 				490A77DF2C79978300768A15 /* GlobalModel.swift in Sources */,
 				490A77E42C7B7ABB00768A15 /* PickerView.swift in Sources */,
 				490A786D2C7CE6B400768A15 /* TransactionsView.swift in Sources */,
+				49D639CD2C84E1E0006DC89F /* IconPickerView.swift in Sources */,
 				49D639B72C7F6A79006DC89F /* ScrollGoalVIew.swift in Sources */,
 				490A77E72C7B904A00768A15 /* DateFormaterExtan.swift in Sources */,
 				490A77E12C79999D00768A15 /* HeaderView.swift in Sources */,
@@ -582,6 +617,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49D639C32C84CC98006DC89F /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49D639C42C84CC98006DC89F /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D639C32C84CC98006DC89F /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		49D639C62C84CC98006DC89F /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D639C32C84CC98006DC89F /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 490A77BB2C79940800768A15 /* Project object */;
 }

@@ -30,9 +30,6 @@ struct MainCircleChartView: View {
             VStack(alignment: .center) {
                 Text("1975.80 ₪")
                     .font(.custom("Inter18pt-ExtraLight", size: sumSize))
-//                Text("Total")
-//                    .font(.custom("Inter18pt-ExtraLight", size: totalSize))
-//                    .foregroundStyle(.whiteAndGrayFont)
             }
         }
         .padding()
@@ -46,6 +43,8 @@ struct MainCircleChartView: View {
 #Preview {
     MainCircleChartView(chartWidth: 300, chartHeight: 300, sumSize: 30, totalSize: 16, isSmallShowing: true, insertRadius: 135)
 }
+
+
 
 
 struct MockDataTesting {

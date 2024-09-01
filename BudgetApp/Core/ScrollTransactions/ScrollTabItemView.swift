@@ -1,48 +1,46 @@
-//
-//  ScrollTabItemView.swift
-//  BudgetApp
-//
-//  Created by Daniil Vaschilin on 26/08/2024.
-//
-
 import SwiftUI
- 
+
 struct ScrollTabItemView: View {
-    @Environment(\.colorScheme) var colorScheme
+    var category: GlobalModel.CategoryTabElements
     var body: some View {
         GeometryReader { geom in
             HStack {
-                Image(.carIcon)
+                Image(category.categoryImage)
+                    .renderingMode(.template)
                     .resizable()
                     .frame(width: 25, height: 25)
                     .padding(10)
-                    .background(.tabIconBackground)
+                    .background(Color(.systemGray5)) // Adjust this to match your design
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .foregroundStyle(.whiteAndGrayFont)
+                    .foregroundColor(category.categoryImageColor)
+
                 VStack(alignment: .leading) {
-                    Text("Category Name")
+                    Text(category.categoryName)
                         .font(.custom("Inter18pt-ExtraLight", size: 18))
-                    Text("Category Context")
+                    Text(category.categoryDescription)
                         .font(.custom("Inter18pt-ExtraLight", size: 12))
                 }
+
                 Spacer()
-                Text("167.30₪")
+
+                Text(String(format: "%.2f", category.categoryAmount))
                     .font(.custom("Inter18pt-ExtraLight", size: 16))
-                    .foregroundStyle(.red)
-                    
+                    .foregroundColor(category.isMinus ? .red : .green)
             }
             .padding(.horizontal)
-            .frame(width: geom.size.width, height: geom.size.height * 6)
-            .background(.tabItmeColors)
-            .clipShape(RoundedRectangle(cornerRadius: 15))
-            .shadow(radius: 6, y: 10.0)
         }
     }
 }
 
-
 #Preview {
-    ScrollTabItemView()
+    ScrollTabItemView(category: sampleCategory)
 }
 
-
+let sampleCategory = GlobalModel.CategoryTabElements(
+    categoryName: "Test Category 1",
+    categoryDescription: "Description 1",
+    categoryAmount: 300.00,
+    isMinus: false,
+    categoryImage: "mailIcon",
+    categoryImageColor: .blue
+)

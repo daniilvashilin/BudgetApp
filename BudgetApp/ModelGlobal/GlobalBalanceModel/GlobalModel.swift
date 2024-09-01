@@ -1,47 +1,34 @@
 
 import Foundation
+import SwiftUI
+//import SVGKit
 
-class GlobalModel {
-    // Main global Amount
-    var TotalAmount: [ItemModel] = []
+class GlobalModel: ObservableObject, Identifiable {
     
-    // ItemCategoryProtocolExample
-    struct ItemModel: Identifiable {
+    @Published private var categoryStorage: [CategoryTabElements] = [CategoryTabElements(categoryName: "Welcome", categoryDescription: "Your first day", categoryAmount: 0.00, isMinus: false, categoryImage: "mailIcon", categoryImageColor: .blue)
+    ]
+    
+    struct CategoryTabElements: Identifiable {
         var id = UUID()
         var categoryName: String
-        var categoryIcon: String
-        var categoryCount: Double
-        var categoryDate: Date
+        var categoryDescription: String
+        var categoryAmount: Double
+        var isMinus: Bool
+        var categoryImage: String
+        var categoryImageColor: Color
+    }
+    
+    // add new category to my storage
+    func addCategory(name: String, description: String, amount: Double, isMinus: Bool, image: String, imageColro: Color) {
+        let newCategory = CategoryTabElements(categoryName: name, categoryDescription: description, categoryAmount: amount, isMinus: isMinus, categoryImage: image, categoryImageColor: imageColro)
+        categoryStorage.append(newCategory)
+    }
+    // accsess to my storage
+    func getCategories() -> [CategoryTabElements] {
+        return categoryStorage
+    }
+    // Last transactions storage access
+    func getCategoriesReversed() -> [CategoryTabElements] {
+        return categoryStorage.reversed()
     }
 }
-
-// Income class
-class Expenses {
-    var expensesArray: [GlobalModel.ItemModel] = []
-    
-   // Add
-    func addExpense(item: GlobalModel.ItemModel) {
-        expensesArray.append(item)
-    }
-    
-    // Delete
-    func removeExpense(id: UUID) {
-        expensesArray.removeAll { $0.id == id }
-    }
-}
-
-// Expensses Class
-class Income {
-    var incomeArray: [GlobalModel.ItemModel] = []
-    
-    // Add
-    func addIncome(item: GlobalModel.ItemModel) {
-        incomeArray.append(item)
-    }
-    
-    // Delete
-    func removeIncome(id: UUID) {
-        incomeArray.removeAll { $0.id == id }
-    }
-}
-

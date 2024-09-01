@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "financeIcon.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

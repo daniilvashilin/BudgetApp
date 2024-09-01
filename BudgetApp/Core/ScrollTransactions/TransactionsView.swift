@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct TransactionsView: View {
+    @StateObject var vm = GlobalModel()
     var body: some View {
         GeometryReader {geom in
             ScrollView(.vertical) {
-                ForEach(0..<5) {item in
-                    ScrollTabItemView()
+                ForEach(vm.getCategories()) {item in
+                    ScrollTabItemView(category: item)
                         .padding(.horizontal, geom.size.height * 0.02) // Horizontal padding
                         .padding(.vertical, geom.size.height * 0.040)  // Vertical padding
                 }
