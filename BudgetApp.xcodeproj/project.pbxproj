@@ -34,6 +34,7 @@
 		49D639C72C84CC98006DC89F /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49D639C62C84CC98006DC89F /* SVGKitSwift */; };
 		49D639CB2C84DE5A006DC89F /* TransactionAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639CA2C84DE5A006DC89F /* TransactionAddingView.swift */; };
 		49D639CD2C84E1E0006DC89F /* IconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639CC2C84E1E0006DC89F /* IconPickerView.swift */; };
+		49D639D02C8619DF006DC89F /* ChartVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D639CF2C8619DF006DC89F /* ChartVIewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		49D639C12C80FDA4006DC89F /* CustimColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustimColorPickerView.swift; sourceTree = "<group>"; };
 		49D639CA2C84DE5A006DC89F /* TransactionAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAddingView.swift; sourceTree = "<group>"; };
 		49D639CC2C84E1E0006DC89F /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
+		49D639CF2C8619DF006DC89F /* ChartVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartVIewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,7 +270,8 @@
 		490A78762C7E6E5300768A15 /* CircleChart */ = {
 			isa = PBXGroup;
 			children = (
-				490A78662C7BA1D600768A15 /* MainCircleChartView.swift */,
+				49D639CE2C8619C4006DC89F /* ChartViewModel */,
+				49D639CF2C8619DF006DC89F /* ChartVIewModel.swift */,
 			);
 			path = CircleChart;
 			sourceTree = "<group>";
@@ -308,6 +311,14 @@
 				49D639CA2C84DE5A006DC89F /* TransactionAddingView.swift */,
 			);
 			path = TransactionVIewsMain;
+			sourceTree = "<group>";
+		};
+		49D639CE2C8619C4006DC89F /* ChartViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				490A78662C7BA1D600768A15 /* MainCircleChartView.swift */,
+			);
+			path = ChartViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +416,7 @@
 				49D639B72C7F6A79006DC89F /* ScrollGoalVIew.swift in Sources */,
 				490A77E72C7B904A00768A15 /* DateFormaterExtan.swift in Sources */,
 				490A77E12C79999D00768A15 /* HeaderView.swift in Sources */,
+				49D639D02C8619DF006DC89F /* ChartVIewModel.swift in Sources */,
 				490A78752C7E6DE600768A15 /* StatsPageView.swift in Sources */,
 				49D639BE2C80E1D0006DC89F /* AddTransactionStyleView.swift in Sources */,
 				490A786F2C7CE6CE00768A15 /* ScrollTabItemView.swift in Sources */,

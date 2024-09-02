@@ -15,7 +15,7 @@ struct AddTransactionStyleView: View {
     @Binding var isPresented: Bool
     @State var colorPickerPressed = false
     @State private var selectedColor: Color = .blue
-    @StateObject var vm = GlobalModel()
+    @EnvironmentObject var vm: GlobalModel
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible()),

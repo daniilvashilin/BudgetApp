@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomButtonBlueView: View {
     @State var isPressed = false
-    @StateObject var vm = GlobalModel()
+    @EnvironmentObject var vm: GlobalModel
     var body: some View {
         Button(action: {
             withAnimation(.easeInOut(duration: 3)) { // Custom animation

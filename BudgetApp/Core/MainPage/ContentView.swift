@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var vm: GlobalModel
     var body: some View {
         GeometryReader { geom in
             ZStack {
@@ -18,7 +19,7 @@ struct ContentView: View {
                     // Header
                     HeaderView(showPicker: true)
                     // Chart
-                    MainCircleChartView(chartWidth: 300, chartHeight: 300, sumSize: 30, totalSize: 16, isSmallShowing: true, insertRadius: 135)
+                    ChartVIewModel(insertRadius: 135, chartWidth: 300, chartHeight: 300, sumSize: 30, totalSize: 16, isSmallShowing: true)                    
                         .padding(.bottom)
                     // Blue Button Add transaction
                     CustomButtonBlueView()
@@ -27,10 +28,12 @@ struct ContentView: View {
                     SearchButtonView()
                     // Scrollview for last transactions
                     TransactionsView()
-                        .frame(width: geom.size.width, height: geom.size.height)
+//                        .frame(width: geom.size.width, height: geom.size.height)
+                        .frame(maxWidth: geom.size.width, maxHeight: .infinity + 100)
                         .background(.tabIconBackground)
                         .clipShape(RoundedRectangle(cornerRadius: 30))
                         .shadow(radius: 1)
+                        .edgesIgnoringSafeArea(.bottom)
                 }
             }
         }

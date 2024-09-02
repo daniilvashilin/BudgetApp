@@ -5,8 +5,8 @@ import SwiftUI
 
 class GlobalModel: ObservableObject, Identifiable {
     
-    @Published private var categoryStorage: [CategoryTabElements] = [CategoryTabElements(categoryName: "Welcome", categoryDescription: "Your first day", categoryAmount: 0.00, isMinus: false, categoryImage: "mailIcon", categoryImageColor: .blue)
-    ]
+    @Published private var categoryStorage: [CategoryTabElements] = []
+    @Published private var storageSumCount: Double = 0
     
     struct CategoryTabElements: Identifiable {
         var id = UUID()
@@ -25,10 +25,14 @@ class GlobalModel: ObservableObject, Identifiable {
     }
     // accsess to my storage
     func getCategories() -> [CategoryTabElements] {
-        return categoryStorage
+        return categoryStorage.isEmpty ? [] : categoryStorage
     }
-    // Last transactions storage access
+    // Last transactions storage accessa
     func getCategoriesReversed() -> [CategoryTabElements] {
         return categoryStorage.reversed()
+    }
+    
+    func sumStorage() -> Double {
+        return categoryStorage.reduce(0) { $0 + $1.categoryAmount }
     }
 }

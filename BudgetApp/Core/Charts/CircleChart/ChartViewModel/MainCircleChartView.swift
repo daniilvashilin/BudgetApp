@@ -9,6 +9,7 @@ import SwiftUI
 import Charts
 
 struct MainCircleChartView: View {
+    @EnvironmentObject var vm: GlobalModel
     var chartWidth: Double
     var chartHeight: Double
     var sumSize: Double

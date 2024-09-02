@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct BudgetAppApp: App {
-    var body: some Scene {
-        WindowGroup {
-            NavigationStack {
-                ContentView()
-            }
-        }
-    }
-}
+    @StateObject var globalModel = GlobalModel()
+     var body: some Scene {
+         WindowGroup {
+             ContentView()
+                 .environmentObject(globalModel)  // Make sure this is provided here
+         }
+     }
+ }
